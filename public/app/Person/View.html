@@ -1,0 +1,18 @@
+<script src='/angular/angular.min.js'></script>
+<script src='/shared/Domain/Person.js'></script>
+<script src='Controller.js'></script>
+
+<div ng-app="TheApp" ng-controller="Controller as c">
+	{{c.name}}
+	
+	<p>
+		Person: {{c.person}}
+	</p>	
+	
+	<p>
+		{{c.validationMessages}}
+	</p>
+	
+	<button ng-click="c.save()">Save</button>
+	
+</div>
