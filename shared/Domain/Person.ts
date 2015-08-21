@@ -9,8 +9,8 @@ module Domain {
 		validate() : string[] {
 			var validations : string[] = [];
 			
-			if (this.age < 0)
-				validations.push('Cannot be negative age, bad value');
+			if (this.age < 0 || this.age == undefined || this.age == null)
+				validations.push('Age must be equals or more than zero');
 				
 			return validations;	
 		}

@@ -7,8 +7,8 @@ var Domain;
         // and we can also re-use this logic on back-end, e.g., NodeJS 
         Person.prototype.validate = function () {
             var validations = [];
-            if (this.age < 0)
-                validations.push('Cannot be negative age, bad value');
+            if (this.age < 0 || this.age == undefined || this.age == null)
+                validations.push('Age must be equals or more than zero');
             return validations;
         };
         return Person;
