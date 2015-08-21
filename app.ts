@@ -8,8 +8,8 @@ import extend = require('extend');
 
 
 class ExternalizedDomain {
-    static Person : typeof Domain.Person = require('./shared/Domain/Person.js').DomainPerson;
-    static Country : typeof Domain.Country = require('./shared/Domain/Country.js').DomainCountry;
+    static Person : typeof Domain.Person = require('./shared/Domain/Person').DomainPerson;
+    static Country : typeof Domain.Country = require('./shared/Domain/Country').DomainCountry;
 }
 
 

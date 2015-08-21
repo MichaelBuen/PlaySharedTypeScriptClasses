@@ -5,8 +5,8 @@ var extend = require('extend');
 var ExternalizedDomain = (function () {
     function ExternalizedDomain() {
     }
-    ExternalizedDomain.Person = require('./shared/Domain/Person.js').DomainPerson;
-    ExternalizedDomain.Country = require('./shared/Domain/Country.js').DomainCountry;
+    ExternalizedDomain.Person = require('./shared/Domain/Person').DomainPerson;
+    ExternalizedDomain.Country = require('./shared/Domain/Country').DomainCountry;
     return ExternalizedDomain;
 })();
 var app = express();
