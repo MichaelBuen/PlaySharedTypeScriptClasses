@@ -3,6 +3,8 @@ var Domain;
     var Person = (function () {
         function Person() {
         }
+        // we can use this logic on front-end, e.g., Angular.
+        // and we can also re-use this logic on back-end, e.g., NodeJS 
         Person.prototype.validate = function () {
             var validations = [];
             if (this.age < 0)

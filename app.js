@@ -6,6 +6,7 @@ var ExternalizedDomain = (function () {
     function ExternalizedDomain() {
     }
     ExternalizedDomain.Person = require('./shared/Domain/Person.js').DomainPerson;
+    ExternalizedDomain.Country = require('./shared/Domain/Country.js').DomainCountry;
     return ExternalizedDomain;
 })();
 var app = express();
@@ -20,7 +21,8 @@ app.use('/', express.static(path.join(__dirname, 'public'), { extensions: ['html
 app.use('/angular', express.static(path.join(__dirname, 'node_modules', 'angular')));
 app.use('/shared', express.static(path.join(__dirname, 'shared')));
 app.post('/api/person', function (req, res) {
-    var person = extend(new ExternalizedDomain.Person(), req.body);
+    var person = new ExternalizedDomain.Person();
+    extend(person, req.body);
     var messages = person.validate();
     if (messages.length > 0)
         res.status(400).json(messages);

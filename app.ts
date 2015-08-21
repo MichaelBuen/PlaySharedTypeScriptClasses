@@ -10,13 +10,11 @@ import extend = require('extend');
 
 class ExternalizedDomain {
     static Person : typeof Domain.Person = require('./shared/Domain/Person.js').DomainPerson;
+    static Country : typeof Domain.Person = require('./shared/Domain/Country.js').DomainCountry;
 }
 
 
 var app = express();
-
-
-
 
 
 
@@ -42,10 +40,10 @@ app.use('/angular', express.static( path.join(__dirname, 'node_modules', 'angula
 app.use('/shared', express.static( path.join(__dirname, 'shared') )); 
 
 app.post('/api/person', (req,res) => {
-
-  
-  
-  var person = <Domain.Person> extend(new ExternalizedDomain.Person(), req.body);
+   
+   
+  var person = new ExternalizedDomain.Person();
+  extend(person, req.body);
             
   let messages = person.validate();  
   
