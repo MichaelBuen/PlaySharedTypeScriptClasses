@@ -16,8 +16,6 @@ class ExternalizedDomain {
 var app = express();
 
 
-
-
 app.get('/', (req,res) => res.send('Hello Lambda World!'));
 
   
@@ -29,23 +27,21 @@ app.get('/', (req,res) => res.send('Hello Lambda World!'));
 });
 
 
-app.use(bodyParser.json());
 
 app.use('/', express.static( path.join(__dirname, 'public'), { extensions: ['html'] })); // if entered a url without an extension, attach html
-
-
 app.use('/angular', express.static( path.join(__dirname, 'node_modules', 'angular') )); 
 
 app.use('/shared', express.static( path.join(__dirname, 'shared') )); 
 
+app.use(bodyParser.json());
 app.post('/api/person', (req,res) => {
    
    
   var person = new ExternalizedDomain.Person();
   extend(person, req.body);
             
-  let messages = person.validate();  
-  
+  var messages = person.validate();  
+   
   if (messages.length > 0)
       res.status(400).json(messages);
   else

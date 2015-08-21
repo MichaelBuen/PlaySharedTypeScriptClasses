@@ -4,7 +4,7 @@ var Domain;
         function Person() {
         }
         // we can use this logic on front-end, e.g., Angular.
-        // and we can also re-use this logic on back-end, e.g., NodeJS 
+        // and we can also re-use this logic on back-end, e.g., NodeJS's REST API 
         Person.prototype.validate = function () {
             var validations = [];
             if (this.age < 0 || this.age == undefined || this.age == null)

@@ -16,10 +16,10 @@ var server = app.listen(3000, function () {
     var port = server.address().port;
     console.log('Example app listening at http://%s:%s', host, port);
 });
-app.use(bodyParser.json());
 app.use('/', express.static(path.join(__dirname, 'public'), { extensions: ['html'] })); // if entered a url without an extension, attach html
 app.use('/angular', express.static(path.join(__dirname, 'node_modules', 'angular')));
 app.use('/shared', express.static(path.join(__dirname, 'shared')));
+app.use(bodyParser.json());
 app.post('/api/person', function (req, res) {
     var person = new ExternalizedDomain.Person();
     extend(person, req.body);
