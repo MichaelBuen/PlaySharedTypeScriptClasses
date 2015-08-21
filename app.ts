@@ -7,10 +7,9 @@ import bodyParser = require('body-parser');
 import extend = require('extend');
 
 
-
 class ExternalizedDomain {
     static Person : typeof Domain.Person = require('./shared/Domain/Person.js').DomainPerson;
-    static Country : typeof Domain.Person = require('./shared/Domain/Country.js').DomainCountry;
+    static Country : typeof Domain.Country = require('./shared/Domain/Country.js').DomainCountry;
 }
 
 

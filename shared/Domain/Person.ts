@@ -5,7 +5,7 @@ module Domain {
 		age : number;
 		
 		// we can use this logic on front-end, e.g., Angular.
-		// and we can also re-use this logic on back-end, e.g., NodeJS' REST API 
+		// and we can also re-use this logic on back-end, e.g., NodeJS 
 		validate() : string[] {
 			var validations : string[] = [];
 			
