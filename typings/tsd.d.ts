@@ -6,3 +6,4 @@
 /// <reference path="jquery/jquery.d.ts" />
 /// <reference path="body-parser/body-parser.d.ts" />
 /// <reference path="extend/extend.d.ts" />
+/// <reference path="requirejs/require.d.ts" />

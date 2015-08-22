@@ -29,7 +29,9 @@ app.get('/', (req,res) => res.send('Hello Lambda World!'));
 
 
 app.use('/', express.static( path.join(__dirname, 'public'), { extensions: ['html'] })); // if entered a url without an extension, attach html
-app.use('/angular', express.static( path.join(__dirname, 'node_modules', 'angular') )); 
+app.use('/angular', express.static( path.join(__dirname, 'node_modules', 'angular') ));
+app.use('/jquery', express.static( path.join(__dirname, 'node_modules', 'jquery') ));
+app.use('/requirejs', express.static( path.join(__dirname, 'node_modules', 'requirejs') )); 
 
 app.use('/shared', express.static( path.join(__dirname, 'shared') )); 
 
