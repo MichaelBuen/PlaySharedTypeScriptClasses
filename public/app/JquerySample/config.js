@@ -3,8 +3,6 @@ requirejs.config({
         "jquery": "/jquery/dist/jquery"
     }
 });
-if (true) {
-    var require = window["require"];
-    require(['app']);
-}
+var need = window["require"];
+need(['app']);
 //# sourceMappingURL=config.js.map
