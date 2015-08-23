@@ -10,5 +10,7 @@ var Controller = (function () {
     };
     return Controller;
 })();
-angular.module('TheApp', []).controller('Controller', Controller);
+var app = angular.module('TheApp', []).controller('Controller', Controller);
+console.log(app['name']);
+console.log('Yay');
 //# sourceMappingURL=Controller.js.map

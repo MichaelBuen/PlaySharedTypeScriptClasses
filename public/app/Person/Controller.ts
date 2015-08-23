@@ -19,4 +19,7 @@ class Controller {
 				
 }
 
-angular.module('TheApp', []).controller('Controller', Controller);
+var app = angular.module('TheApp', []).controller('Controller', Controller);
+
+console.log(app['name']);
+console.log('Yay');
