@@ -10,6 +10,8 @@ import extend = require('extend');
 class ExternalizedDomain {
     static Person : typeof Domain.Person = require('./shared/Domain/Person').DomainPerson;
     static Country : typeof Domain.Country = require('./shared/Domain/Country').DomainCountry;
+    
+    static Calculator : typeof Calculator = require('../shared/Domain/Calculator').Calculator;
 }
 
 
@@ -39,7 +41,7 @@ app.use(bodyParser.json());
 app.post('/api/person', (req,res) => {
    
    
-  var person = new ExternalizedDomain.Person();
+  var person = new ExternalizedDomain.Person();  
   extend(person, req.body);
             
   var messages = person.validate();  
