@@ -8,7 +8,7 @@ module Domain.Calculator {
 
     export function divide(dividend: number, divisor: number): number {
 
-        return null;
+        return dividend / divisor;
     }
 }
 

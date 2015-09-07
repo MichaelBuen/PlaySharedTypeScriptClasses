@@ -8,7 +8,7 @@ var Domain;
         }
         Calculator.multiply = multiply;
         function divide(dividend, divisor) {
-            return null;
+            return dividend / divisor;
         }
         Calculator.divide = divide;
     })(Calculator = Domain.Calculator || (Domain.Calculator = {}));
