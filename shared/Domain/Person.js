@@ -1,3 +1,4 @@
+///<reference path="../../typings/node/node.d.ts"/>
 var Domain;
 (function (Domain) {
     var Person = (function () {
@@ -16,6 +17,6 @@ var Domain;
     Domain.Person = Person;
 })(Domain || (Domain = {}));
 if (typeof exports != 'undefined') {
-    exports.DomainPerson = Domain.Person;
+    module.exports = Domain.Person;
 }
 //# sourceMappingURL=Person.js.map
