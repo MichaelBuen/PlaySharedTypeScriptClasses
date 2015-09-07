@@ -17,8 +17,12 @@ describe("module calculator", () => {
         var product = ExternalizedDomain.Calculator.multiply(2,3);
         console.log(product);
 
+        expect(product).toEqual(6);
+
     });
     it("should divide 6 and 3", ()=>{
         var res = ExternalizedDomain.Calculator.divide(6,3);
+
+        expect(res).toEqual(2);
     })
 });
