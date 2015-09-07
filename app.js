@@ -19,9 +19,9 @@
     var ExternalizedDomain = (function () {
         function ExternalizedDomain() {
         }
-        ExternalizedDomain.Person = require('./shared/Domain/Person').DomainPerson;
-        ExternalizedDomain.Country = require('./shared/Domain/Country').DomainCountry;
-        ExternalizedDomain.Calculator = require('../shared/Domain/Calculator').Calculator;
+        ExternalizedDomain.Person = require('./shared/Domain/Person');
+        ExternalizedDomain.Country = require('./shared/Domain/Country');
+        ExternalizedDomain.Calculator = require('./shared/Domain/Calculator');
         return ExternalizedDomain;
     })();
     var app = express();

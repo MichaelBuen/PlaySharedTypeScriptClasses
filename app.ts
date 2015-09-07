@@ -17,10 +17,10 @@ import extend = require('extend');
 
 
 class ExternalizedDomain {
-    static Person : typeof Domain.Person = require('./shared/Domain/Person').DomainPerson;
-    static Country : typeof Domain.Country = require('./shared/Domain/Country').DomainCountry;
+    static Person : typeof Domain.Person = require('./shared/Domain/Person');
+    static Country : typeof Domain.Country = require('./shared/Domain/Country');
     
-    static Calculator : typeof Calculator = require('../shared/Domain/Calculator').Calculator;
+    static Calculator : typeof Domain.Calculator = require('./shared/Domain/Calculator');
 }
 
 

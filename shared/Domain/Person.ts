@@ -1,3 +1,4 @@
+///<reference path="../../typings/node/node.d.ts"/>
 module Domain {
 		
 	export class Person {
@@ -26,5 +27,5 @@ module Domain {
 // http://www.sitepoint.com/understanding-module-exports-exports-node-js/ -- internals of require
 declare var exports: any;
 if (typeof exports != 'undefined') {
-    exports.DomainPerson = Domain.Person;
+    module.exports = Domain.Person;
 }
