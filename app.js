@@ -25,7 +25,7 @@
         return ExternalizedDomain;
     })();
     var app = express();
-    app.get('/', function (req, res) { return res.send('Hello Lambda World!'); });
+    app.get('/', function (req, res) { return res.send('Hello Lambda World! ' + ExternalizedDomain.Calculator.multiply(7, 6)); });
     var server = app.listen(3000, function () {
         var host = server.address().address;
         var port = server.address().port;

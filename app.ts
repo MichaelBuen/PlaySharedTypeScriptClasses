@@ -27,7 +27,7 @@ class ExternalizedDomain {
 var app = express();
 
 
-app.get('/', (req,res) => res.send('Hello Lambda World!'));
+app.get('/', (req,res) => res.send('Hello Lambda World! ' + ExternalizedDomain.Calculator.multiply(7,6) ));
 
   
   var server = app.listen(3000, function () {
