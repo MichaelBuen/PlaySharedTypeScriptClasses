@@ -1,3 +1,6 @@
+/// <reference path="./typings/express/express.d.ts"/>
+/// <reference path="./typings/body-parser/body-parser.d.ts"/>
+/// <reference path="./typings/extend/extend.d.ts"/>
 (function (deps, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
         var v = factory(require, exports); if (v !== undefined) module.exports = v;
@@ -6,6 +9,9 @@
         define(deps, factory);
     }
 })(["require", "exports", 'express', 'path', 'body-parser', 'extend'], function (require, exports) {
+    /// <reference path="./shared/Domain/Calculator.ts"/>
+    /// <reference path="./shared/Domain/Person.ts"/>
+    /// <reference path="./shared/Domain/Country.ts"/>
     var express = require('express');
     var path = require('path');
     var bodyParser = require('body-parser');

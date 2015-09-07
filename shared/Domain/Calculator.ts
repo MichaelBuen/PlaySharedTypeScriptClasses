@@ -1,4 +1,5 @@
-module Calculator {
+///<reference path="../../typings/node/node.d.ts"/>
+module Domain.Calculator {
 
     export function multiply(multiplicand: number, multiplier: number): number {
 
@@ -13,7 +14,7 @@ module Calculator {
 
 declare var exports: any;
 if (typeof exports != 'undefined') {
-    exports.Calculator = Calculator;
+    module.exports = Domain.Calculator;
 }
 
 

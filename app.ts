@@ -1,3 +1,12 @@
+/// <reference path="./typings/express/express.d.ts"/>
+/// <reference path="./typings/body-parser/body-parser.d.ts"/>
+/// <reference path="./typings/extend/extend.d.ts"/>
+
+/// <reference path="./shared/Domain/Calculator.ts"/>
+/// <reference path="./shared/Domain/Person.ts"/>
+/// <reference path="./shared/Domain/Country.ts"/>
+
+
 import express = require('express');
 
 import path = require('path');
